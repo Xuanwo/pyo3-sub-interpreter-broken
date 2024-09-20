@@ -10,6 +10,8 @@ Arrow UDF is a User-Defined Functions Framework that allows users to easily crea
 
 We use pyo3 to create a sub-interpreter and run users' UDFs within it to avoid the global GIL. It used to work fine, but we discovered it broke after the `0.22` release, specifically after [this commit](https://github.com/PyO3/pyo3/commit/1c64a03ea084852572872c0d6b5fd029f116c807).
 
+Upstream issue: https://github.com/PyO3/pyo3/issues/4570
+
 ## Reproduce
 
 In the `Cargo.toml`, there are several pyo3 versions with comments. You can uncomment them and run `cargo test`.
