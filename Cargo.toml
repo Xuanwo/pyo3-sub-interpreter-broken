@@ -1,0 +1,19 @@
+[package]
+name = "pyo3-sub-interpreter-broken"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+anyhow = "1.0.89"
+
+# 0.21 works.
+#pyo3 = { version = "0.21",features = ["gil-refs"] }
+
+# 0.22 panic.
+pyo3 = { version = "0.22",features = ["gil-refs"] }
+
+# The last work commit.
+#pyo3 = { git="https://github.com/PyO3/pyo3", rev="88f2f6f4d56f2bac1220d1f0d0ac912b8c160c4a", features = ["gil-refs"] }
+
+# The first panic commit.
+#pyo3 = { git="https://github.com/PyO3/pyo3", rev="1c64a03ea084852572872c0d6b5fd029f116c807", features = ["gil-refs"] }
